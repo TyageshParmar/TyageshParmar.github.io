@@ -1,0 +1,147 @@
+I'll give you the reference file, you have to update it according to the photo I give you and the theme is the same as what I told you earlier, And I am giving the file I am telling you about in text format below.
+follow the image format
+Profile image url: <https://i.pinimg.com/736x/9f/5c/b7/9f5cb786497c069d11f1dd847db56951.jpg>
+Format style url: <https://i.pinimg.com/736x/a4/84/8f/a4848ffd712a068cc0a561c7b8a2e1d1.jpg>
+
+First add a my name "Hello I'm Tyagesh Parmar" in second line add a "AI Engineer, ML Engineer, Data scientist"  in a typing fancy way
+
+1. Skills
+Programming languages: Python, SQL
+Tools & Technologies: Computer vision, Natural language processing, Deep Learning, Machine Learning, Power BI, Tableau, MS Word, MS Excel
+
+2. Projects
+
+Project Name (note: link the project wiht there reposiratry by given links)
+1) Portuguese Bank Marketing Project <https://github.com/TyageshParmar/Portuguese-Bank-Marketing-Project>
+● Built a predictive model using machine learning algorithms to forecast the likelihood of a 
+customer subscribing to a bank product based on historical marketing data. 
+● Applied classification techniques to optimize marketing strategies and improve campaign success 
+rates.
+
+2)Heart Disease Prediction <https://github.com/TyageshParmar/Heart-Disease-Prediction>
+● Developed a machine learning model to predict the likelihood of heart disease based on medical 
+data. 
+● Achieved high accuracy in identifying at-risk patients, providing actionable insights for early 
+intervention and treatment. 
+
+3)Texas Employee Salary Prediction <https://github.com/TyageshParmar/Texas-Employee-Salary-Prediction>
+● Designed a regression model to predict employee salaries based on factors such as experience, 
+education, and job role. 
+● Delivered insights that helped organizations set competitive salary structures. 
+
+4)Detecting the Type of Skin Disorder <https://github.com/TyageshParmar/Detecting-the-Type-of-Skin-Disorder>
+● Built a machine learning model to classify and predict various types of skin disorders. 
+● Applied classification algorithms and diagnosis. 
+
+5)No-Churn Telecom (Client/Live Project) <https://github.com/TyageshParmar/No-Churn-Telecom-Client-Live-Project->
+● Worked on a predictive model for customer retention in the telecom industry, identifying factors 
+that contributed to customer churn. 
+● Recommended strategies to reduce attrition, improving customer loyalty and retention rates. 
+
+6)Employee Performance Prediction <https://github.com/TyageshParmar/Employee-Performance-Analysis>
+● This project aims to predict employee performance ratings at INX Future Inc. using machine 
+learning and deep learning models. The dataset includes various features such as work experience, 
+job satisfaction, training history, and work-life balance to analyze and improve employee 
+performance. 
+
+7)Global Weather Trend Forecasting <https://github.com/TyageshParmar/Global-Weather-Prediction>
+● This project analyzes  and forecasts global weather trends using the Global Weather 
+Repository dataset from Kaggle. The goal is to apply both basic and advanced data science 
+techniques to predict future temperature patterns and extract meaningful insights from the data.
+
+6. Project images — either: (Note: All images in same size and well mainted formate and mousehover efect and also image and project name link with there project reposiraty)
+Detecting-the-Type-of-Skin-Disorder: https://i.pinimg.com/736x/9c/dd/0e/9cdd0e9aaff3118231451275e70c1b8d.jpg
+Heart-Disease-Prediction: https://i.pinimg.com/736x/90/ea/32/90ea3269711e0cdef03f4931ef9519d1.jpg
+No-Churn-Telecom-Client-Live-Project : https://i.pinimg.com/736x/60/f9/aa/60f9aaa3cd8829dad783b663364a264c.jpg
+Texas-Employee-Salary-Prediction : https://i.pinimg.com/736x/74/da/1b/74da1b6aeff75bf9810997eb023128f6.jpg
+Portuguese-Bank-Marketing-Project : https://i.pinimg.com/736x/eb/80/b4/eb80b4e16e17b378004ec1564fef94b1.jpg
+employee performance prediction : https://i.pinimg.com/736x/b1/70/69/b170695e16cce5b851d7296be4d0d87e.jpg
+Global Weather Trend Forecasting: https://i.pinimg.com/736x/79/2c/43/792c43e49f0ac7639b4c7e68990225d4.jpg
+
+3. Education
+Diploma in Information Technology 
+Government Polytechnic Gandhinagar – Gandhinagar, Gujarat, India 
+completed Year: 2022 
+
+High School 
+Shakti Vidyalaya – Ahmedabad, Gujarat, India 
+completed Year: 2017 
+
+4. Experience
+Rubixe - AI Solutions Company – Ahmedabad, Gujarat 
+Full-time · Present Ahmedabad, Gujarat, India (Remote) 
+Artificial Intelligence Engineer Intern 
+March 2025 – Present 
+● Developed AI-driven solutions using computer vision and natural language processing (NLP). 
+● Built and fine-tuned deep learning models for image recognition and text analysis. 
+● Researched and implemented state-of-the-art AI methodologies to improve system accuracy. 
+● Collaborated with cross-functional teams to integrate AI models into real-world applications. 
+Data Scientist Intern 
+October 2024 – Present 
+● Designed and deployed machine learning models for predictive analytics and data-driven 
+decision-making. 
+● Utilized Tableau and other visualization tools to present insights from complex datasets. 
+● Optimized existing ML algorithms to improve efficiency, accuracy, and scalability. 
+● Conducted exploratory data analysis (EDA) and feature engineering to enhance model 
+performance. 
+
+Synobiz – Ahmedabad, Gujarat 
+Full-time · 1 yrs Ahmedabad, Gujarat, India On-site 
+Junior SAP Technical Supporter 
+May 2023 – Nov 2023 
+● Provided SAP technical support by troubleshooting issues and ensuring smooth system operations. 
+● Installed and configured SAP add-ons, enhancing software functionality for business processes. 
+● Utilized SQL and Crystal Reports to generate insightful reports and improve decision-making. 
+● Assisted in the optimization of SAP applications, ensuring efficient performance. 
+Internship Trainee (SAP Products) 
+Dec 2022 – May 2023 
+● Gained hands-on experience with SAP Products, learning about system configurations and 
+implementations. 
+● Assisted in SAP addon installations and basic troubleshooting to support business operations. 
+● Worked alongside senior professionals to enhance understanding of enterprise resource planning 
+(ERP) systems 
+
+Arvind Advanced Materials – Ahmedabad, Gujarat 
+Full-time · 2 yrs Ahmedabad, Gujarat, India On-site 
+Junior Merchandiser  
+Feb 2022 – Dec 2022 
+● Managed and coordinated textile product merchandising processes, ensuring timely deliveries. 
+● Collaborated with vendors and suppliers to optimize supply chain efficiency.  
+● Maintained quality control standards, ensuring that products met company and industry 
+specifications. 
+Computer Operator and Programming Assistant 
+Dec 2020 – Feb 2022 
+● Assisted in computer operations and data entry for textile industry applications. 
+● Supported the programming and maintenance of software tools used in textile manufacturing. 
+● Ensured accurate documentation and reporting of production data.
+
+5. Certifications
+Artificial Intelligence Engineer  – from NASSCOM & Future Skills-Prime
+Artificial Intelligence Expert -  from IABAC™ - International Association of Business Analytics Certifications. 
+ Certified Data Scientist from NASSCOM & Future Skills-Prime. 
+Certified Data Scientist from IABAC™ - International Association of Business Analytics Certifications &
+ Future Skills-Prime. 
+Certified Data Science Foundation” from IABAC™ - International Association of Business Analytics
+ Certifications.
+Career Essentials in Data Analysis by Microsoft and LinkedIn 
+
+7. Contact & Social Links
+Email: tyageshrparmar2107@gmail.com
+Phone (optional) +91 8758202474
+LinkedIn : https://www.linkedin.com/in/tyagesh-parmar-740248333
+GitHub: https://github.com/TyageshParmar
+
+8. Have a question
+And also make last <"Have a question? 'Click here' button"> and tell me how to make it the free google form like this<https://docs.google.com/forms/d/e/1FAIpQLSdA8sKXw6u26kLjEs7DEsfdAy2o7P-HJ27FMCvd8jqM1HMzBA/viewform>
+
+Note this:
+Light Mode: Beige (#F5F5DC) background + Dark Green (#006400) text
+Dark Mode: White (#FFFFFF) background + Royal Blue (#4169E1) text
+Black & Gold Mode: Black (#000000) background + Gold (#D3AF37) text
+Add a beautiful fade-in, slide, hover animations for sections and images
+Update About Me with your full detailed professional information
+Update Projects Section with all your real project images and clean titles
+Made it fully responsive on mobile, tablet, and desktops
+Add a Theme Switcher button for color modes
+Clean, modern professional UI inspired by your sample
+SEO and accessibility improvements (small fixes under the hood)
