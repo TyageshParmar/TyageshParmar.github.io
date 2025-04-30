@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyagesh Parmar - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --background-light: #f8f9fa;
+            --card-light: #ffffff;
+            --text-light: #212529;
+            --primary-light: #0d6efd;
+
+            --background-dark: #121212;
+            --card-dark: #1e1e1e;
+            --text-dark: #f1f1f1;
+            --primary-dark: #90caf9;
+
+            --background-blackgold: #000000;
+            --card-blackgold: #1a1a1a;
+            --text-blackgold:#DFE1BE;/* #D3AF37*/
+            --primary-blackgold:#DFE1BE;/*#D3AF37*/
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-light);
+            transition: all 0.4s ease;
+            justify-content: center; /* Center horizontally */
+            display: flex;
+            flex-direction: column;
+            /* align-items: center;
+            text-align: center; */
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--card-light);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: background 0.4s, color 0.4s;
+            transform: translateY(40px) scale(0.95);
+            /* margin-left: auto;
+            margin-right: auto; */
+            margin: 30px auto;
+            animation: fancyFade 0.8s ease-out forwards;
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+        
+        @keyframes fancyFade {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);;
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+
+        .navbar {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .navbar a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: var(--primary-light);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #0056b3;/* Highlight color on hover */
+        }
+
+        .theme-switcher {
+            position: absolute;/*fixed, relative, sticky*/
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: 2px solid var(--primary-light);
+            border-radius: 8px;
+            padding: 8px 15px;
+            cursor: pointer;
+            color: var(--primary-light);
+            font-weight: bold;
+            transition: all 0.4s;
+        }
+
+        .theme-switcher:hover {
+            background: var(--primary-light);
+            color: white;
+        }
+
+        img.profile {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            margin-left: 20px;
+
+
+            /* width: 200px; /* Enlarged image */
+            /* height: 200px;
+            float: right;
+            margin-left: 30px; /* Spacing from text */
+            /*margin-bottom: 10px;
+            object-fit: cover; 
+            margin: 1px 0;
+            border-radius: 50%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
+            transition: transform 0.3s ease;/**/
+            /*display: flex;
+            justify-content: flex-end;*//* Align image to the right */
+        }
+        img.profile:hover {
+            transform: scale(1.1);
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            border-radius: 16px;
+            background: "toggleTheme()";
+            /* box-shadow: 0 4px 10px rgba(0,0,0,0.1); */
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .profile-text {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;/* left */
+        }
+
+        p, li {
+            line-height: 1.7;
+        }
+
+        /* Dark mode */
+        body.dark-mode {
+            background-color: var(--background-dark);
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .card {
+            background: var(--card-dark);
+        }
+
+        body.dark-mode .navbar a, .dark-mode .theme-switcher {
+            color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        /* Black-Gold mode */
+        body.blackgold-mode {
+            background-color: var(--background-blackgold);
+            color: var(--text-blackgold);
+        }
+
+        body.blackgold-mode .card {
+            background: var(--card-blackgold);
+        }
+
+        body.blackgold-mode .navbar a, .blackgold-mode .theme-switcher {
+            color: var(--primary-blackgold);
+            border-color: var(--primary-blackgold);
+        }
+        .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        }
+        .project-card {
+        background:"toggleTheme()";/* #fff*/
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);/*"toggleTheme()"*/
+        }
+        .project-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 1px solid #eee;/*"toggleTheme()"*/
+        }
+        .project-card h3 {
+        font-size: 1.2em;
+        margin: 15px 0 10px;
+        font-weight: 600;
+        }
+        .project-card p {
+        font-size: 0.95em;
+        padding: 0 20px 20px;
+        color:"toggleTheme()";/* #555*/
+        }
+        .Quesbtn-button {
+            background-color: #87CEEB;
+            color: white;
+            padding: 4px 8px; /*12px 24px;*//*This is the size of the button*/
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .Quesbtn-button:hover {
+            background-color: #87CEEB;
+            transform: scale(1.05);
+        }
+        .CVbtn-button {
+            background-color: #87CEEB;
+            color: white;
+            padding: 5px 10px; /*12px 24px;*//*This is the size of the button*/
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .CVbtn-button:hover {
+            background-color: #87CEEB;
+            transform: scale(1.05);
+        }
+        /* section.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        } */
+    </style>
+</head>
+<body>
+    <!-- <button class="theme-switcher" onclick="toggleTheme()">Switch Theme</button> -->
+    
+    <div class="container">
+        <div class="navbar">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+            <a href="#resume">Resume</a>
+        </div>
+        <!-- <div class="card"> -->
+            <div class="profile-section">
+                <div class="profile-text">
+                    <h1>Hello, I'm Tyagesh Parmar</h1>
+                    <h2>A fresher AI/ML Engineer and Data Scientist</h2>
+                    <p>AI/ML Engineer | Data Scientist</p>
+                </div>
+                <img class="profile" src="https://raw.githubusercontent.com/TyageshParmar/TyageshParmar.github.io/refs/heads/main/Tyagesh%20Portfolio/Profile/1738637131676.jpg" alt="Tyagesh Parmar" />
+            <!-- /*https://i.pinimg.com/736x/9f/5c/b7/9f5cb786497c069d11f1dd847db56951.jpg*/ -->
+            </div>
+        <!-- </div> -->
+
+        <!-- <div class="card" id="home"
+            <h1>Hello, I'm Tyagesh Parmar</h1>
+            <img src="https://i.pinimg.com/736x/9f/5c/b7/9f5cb786497c069d11f1dd847db56951.jpg" alt="Tyagesh Parmar" class="profile">
+            <h2>A fresher AI/ML Engineer and Data Scientist </h2>
+            <p>AI/ML Engineer | Data Scientist</p>
+        </div> -->
+
+        <div class="card" id="about">
+            <h2>About Me</h2>
+            <p>I am a highly motivated AI Engineer, Machine Learning Engineer, and Data Scientist, committed to solving complex challenges through innovative technology. With hands-on experience at Rubixe - AI Solutions, I have developed expertise in Computer Vision, NLP, Deep Learning, and Data Analytics. I am passionate about leveraging AI solutions to drive business impact, continuously exploring the latest advancements in the tech industry.</p>
+        </div>
+
+        <div class="card" id="skills">
+            <h2>Skills</h2>
+            <h3>Programming Languages</h3>
+            <p>Python, SQL</p>
+            <h3>Tools & Technologies</h3>
+            <p>Computer Vision, Natural Language Processing, Deep Learning, Machine Learning, Tableau, Power BI, MS Excel, MS Word and more.</p>
+            <h3>Frameworks</h3>
+            <p>TensorFlow, PyTorch, Scikit-learn, and more.</p>
+        </div>
+
+        <div class="card" id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <!-- <li><strong>Portuguese Bank Marketing Project:</strong> Developed predictive models for customer subscription likelihood using machine learning techniques.</li> -->
+                <!-- <li><strong>Heart Disease Prediction:</strong> Built a classification model to identify patients at risk of heart disease, achieving high accuracy.</li>
+                <li><strong>Texas Employee Salary Prediction:</strong> Designed regression models to predict salaries based on experience and education factors.</li>
+                <li><strong>Skin Disorder Detection:</strong> Developed a machine learning model to classify different types of skin conditions.</li>
+                <li><strong>No-Churn Telecom Project:</strong> Built models to predict customer churn and recommend strategies for retention.</li>
+                <li><strong>Employee Performance Prediction:</strong> Used ML and DL to predict employee ratings and drive performance improvement strategies.</li>
+                <li><strong>Global Weather Trend Forecasting:</strong> Analyzed and forecasted temperature trends using Kaggle weather datasets.</li> -->
+                <div class="project-grid">
+                    <div class="project-card">
+                        <a href="https://github.com/TyageshParmar/Portuguese-Bank-Marketing-Project" target="_blank">
+                            <img src="https://raw.githubusercontent.com/TyageshParmar/TyageshParmar.github.io/refs/heads/main/Tyagesh%20Portfolio/Project%20Image/Portuguese-Bank-Marketing-Project.webp"
+                                alt="Portuguese Bank Marketing Project">
+                            <h3>Portuguese Bank Marketing Project</h3>
+                        </a>
+                        <p>
+                            Built a predictive model using machine learning algorithms to forecast the likelihood of a customer
+                            subscribing to a bank product. Applied classification techniques to optimize marketing strategies.
+                        </p>
+                    </div>
+            
+                    <div class="project-card">
+                        <a href="https://github.com/TyageshParmar/Heart-Disease-Prediction" target="_blank">
+                            <img src="https://github.com/TyageshParmar/TyageshParmar.github.io/blob/main/Tyagesh%20Portfolio/Project%20Image/Heart-Disease-Prediction.jpg?raw=true"
+                                alt="Heart Disease Prediction">
+                            <h3>Heart Disease Prediction</h3>
+                        </a>
+                        <p>
+                            Developed a machine learning model to predict heart disease based on medical data with high accuracy.
+                        </p>
+                    </div>
+            
+                    <div class="project-card">
+                        <a href="https://github.com/TyageshParmar/Texas-Employee-Salary-Prediction" target="_blank">
+                            <img src="https://raw.githubusercontent.com/TyageshParmar/TyageshParmar.github.io/refs/heads/main/Tyagesh%20Portfolio/Project%20Image/Texas-Employee-Salary-Prediction.webp"
+                                alt="Texas Employee Salary Prediction">
+                            <h3>Texas Employee Salary Prediction</h3>
+                        </a>
+                        <p>
+                            Designed a regression model to predict salaries based on experience, education, and job role factors.
+                        </p>
+                    </div>
+            
+                    <div class="project-card">
+                        <a href="https://github.com/TyageshParmar/Detecting-the-Type-of-Skin-Disorder" target="_blank">
+                            <img src="https://raw.githubusercontent.com/TyageshParmar/TyageshParmar.github.io/refs/heads/main/Tyagesh%20Portfolio/Project%20Image/Detecting-the-Type-of-Skin-Disorder.png">
+                            <h3>Detecting the Type of Skin Disorder</h3>
+                        </a>
+                        <p>
+                            Built a classification model to identify different types of skin disorders using machine learning techniques.
+                        </p>
+                    </div>
+            
+                    <div class="project-card">
+                        <a href="https://github.com/TyageshParmar/No-Churn-Telecom-Client-Live-Project-" target="_blank">
+                            <img src="https://github.com/TyageshParmar/TyageshParmar.github.io/blob/main/Tyagesh%20Portfolio/Project%20Image/No-Churn-Telecom-Client-Live-Project.jpg?raw=true" alt="No-Churn Telecom">
+                            <h3>No-Churn Telecom (Client/Live Project)</h3>
+                        </a>
+                        <p>
+                            Created predictive models to retain telecom clients and identify factors influencing customer churn.
+                        </p>
+                    </div>
+            
+                    <div class="project-card">
+                        <a href="https://github.com/TyageshParmar/Employee-Performance-Analysis" target="_blank">
+                            <img src="https://raw.githubusercontent.com/TyageshParmar/TyageshParmar.github.io/refs/heads/main/Tyagesh%20Portfolio/Project%20Image/employee%20performance%20prediction.webp"
+                                alt="Employee Performance Prediction">
+                            <h3>Employee Performance Prediction</h3>
+                        </a>
+                        <p>
+                            Predicted employee ratings using ML and DL models, analyzing work experience and satisfaction.
+                        </p>
+                    </div>
+            
+                    <div class="project-card">
+                        <a href="https://github.com/TyageshParmar/Global-Weather-Prediction" target="_blank">
+                            <img src="https://github.com/TyageshParmar/TyageshParmar.github.io/blob/main/Tyagesh%20Portfolio/Project%20Image/Global%20Weather%20Trend%20Forecasting.jpg?raw=true"
+                                alt="Global Weather Trend Forecasting">
+                            <h3>Global Weather Trend Forecasting</h3>
+                        </a>
+                        <p>
+                            Forecasted global weather trends using Kaggle datasets and applied advanced data science techniques.
+                        </p>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+        <div class="card" id="education">
+            <h2>Education</h2>
+            <!-- <p><strong>Diploma in Information Technology</strong><br>Government Polytechnic Gandhinagar, 2022</p>
+            <p><strong>High School</strong><br>Shakti Vidyalaya, Ahmedabad, 2017</p> -->
+            <div>
+                <h3>Diploma in Information Technology</h3>
+                <p>Government Polytechnic Gandhinagar – Gandhinagar, Gujarat, India</p>
+                <p><strong>Completed Year:</strong> 2022</p>
+            </div>
+            <div>
+                <h3>High School</h3>
+                <p>Shakti Vidyalaya – Ahmedabad, Gujarat, India</p>
+                <p><strong>Completed Year:</strong> 2017</p>
+            </div>
+        </div>
+
+        <div class="card" id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <!-- <li><strong>AI Engineer Intern</strong> at Rubixe (2025–Present)</li>
+                <li><strong>Data Scientist Intern</strong> at Rubixe (2024–Present)</li>
+                <li><strong>Junior SAP Technical Supporter</strong> at Synobiz (2023)</li>
+                <li><strong>Internship Trainee (SAP Products)</strong> at Synobiz (2022-2023)</li>
+                <li><strong>Junior Merchandiser</strong> at Arvind Advanced Materials (2022)</li>
+                <li><strong>Computer Operator and Programming Assistant</strong> at Arvind Advanced Materials (2020-2022)</li> -->
+                <div>
+                    <h3>Rubixe - AI Solutions Company – Ahmedabad, Gujarat (Remote)</h3>
+                    <p><strong>Artificial Intelligence Engineer Intern</strong> (March 2025 – Present)</p>
+                    <ul>
+                        <li>Developed AI-driven solutions using computer vision and natural language processing (NLP).</li>
+                        <li>Built and fine-tuned deep learning models for image recognition and text analysis.</li>
+                        <li>Researched and implemented state-of-the-art AI methodologies to improve system accuracy.</li>
+                        <li>Collaborated with cross-functional teams to integrate AI models into real-world applications.</li>
+                    </ul>
+                    <p><strong>Data Scientist Intern</strong> (October 2024 – Present)</p>
+                    <ul>
+                        <li>Designed and deployed machine learning models for predictive analytics and decision-making.</li>
+                        <li>Utilized Tableau and other tools to present insights from complex datasets.</li>
+                        <li>Optimized ML algorithms to improve efficiency and scalability.</li>
+                        <li>Conducted exploratory data analysis (EDA) and feature engineering to boost model performance.</li>
+                    </ul>
+                </div>
+            
+                <div>
+                    <h3>Synobiz – Ahmedabad, Gujarat (On-site)</h3>
+                    <p><strong>Junior SAP Technical Supporter</strong> (May 2023 – Nov 2023)</p>
+                    <ul>
+                        <li>Provided SAP technical support, troubleshooting system operations.</li>
+                        <li>Installed and configured SAP add-ons, enhancing business processes.</li>
+                        <li>Generated reports using SQL and Crystal Reports.</li>
+                        <li>Assisted in optimizing SAP application performance.</li>
+                    </ul>
+                    <p><strong>Internship Trainee (SAP Products)</strong> (Dec 2022 – May 2023)</p>
+                    <ul>
+                        <li>Gained hands-on experience with SAP configurations and installations.</li>
+                        <li>Supported senior teams with ERP system operations.</li>
+                    </ul>
+                </div>
+            
+                <div>
+                    <h3>Arvind Advanced Materials – Ahmedabad, Gujarat (On-site)</h3>
+                    <p><strong>Junior Merchandiser</strong> (Feb 2022 – Dec 2022)</p>
+                    <ul>
+                        <li>Managed textile merchandising and ensured timely deliveries.</li>
+                        <li>Coordinated with vendors to optimize the supply chain.</li>
+                        <li>Maintained strict quality control standards.</li>
+                    </ul>
+                    <p><strong>Computer Operator and Programming Assistant</strong> (Dec 2020 – Feb 2022)</p>
+                    <ul>
+                        <li>Supported computer operations and data entry tasks.</li>
+                        <li>Maintained and assisted in programming textile industry software tools.</li>
+                        <li>Ensured accurate reporting and data documentation.</li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+
+        <div class="card" id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Artificial Intelligence Engineer - NASSCOM & FutureSkills Prime</li>
+                <li>Artificial Intelligence Expert - IABAC(International Association of Business Analytics Certification)</li>
+                <li>Certified Data Scientist - IABAC & NASSCOM & FutureSkills Prime</li>
+                <li>Data Science Foundation - IABAC(International Association of Business Analytics Certification)</li>
+                <li>Career Essentials in Data Analysis - Microsoft & LinkedIn</li>
+            </ul>
+        </div>
+
+        <div class="card" id="contact">
+            <h2>Contact & Social Links</h2>
+            <p>Email: <a href="mailto:tyageshrparmar2107@gmail.com">tyageshrparmar2107@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/tyagesh-parmar-740248333" target="_blank">LinkedIn Profile</a></p>
+            <p>GitHub: <a href="https://github.com/TyageshParmar" target="_blank">GitHub Profile</a></p>
+        </div>
+
+        <div class="card" id="resume" style="text-align: center;">
+            <h2>Curriculum Vitae</h2>
+            <a 
+            href="https://drive.google.com/file/d/1ztvqMhtjBHxVfWcdWMk3FGvDaEv03096/view?usp=sharing" 
+            target="_blank" 
+            class="CVbtn-button">Download CV
+            </a>
+        </div>
+
+        <!-- <div style="text-align: center;">
+            <h3>Have a question? <a><button class="card" onclick="window.open('https://forms.gle/YqofWv2RrVC92QNU8', '_blank')">Click here</button></a></h3>
+        </div>  -->
+
+        <div style="text-align: center;">
+            <h3>Have a question?
+                <a 
+                href="https://forms.gle/YqofWv2RrVC92QNU8" target="_blank" class="Quesbtn-button">Click here
+                </a>
+            </h3>
+        </div>  
+
+        <!-- <footer style="text-align: center; padding: 10px; font-size: 14px; color: #666;">
+            &copy; 2025 Tyagesh Parmar Portfolio. All rights reserved.
+        </footer> -->
+        <footer style="text-align: center; padding: 10px; font-size: 14px; color: #666;">
+            &copy; <span id="year"></span> Tyagesh Parmar Portfolio. All rights reserved.
+        </footer>        
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('blackgold-mode');
+            } else if (body.classList.contains('blackgold-mode')) {
+                body.classList.remove('blackgold-mode');
+            } else {
+                body.classList.add('dark-mode');
+            }
+        }
+        // // Typing Animation
+        // const typingAnimationElement = document.getElementById('typing-animation');
+        // const typingTexts = ['AI Engineer', 'ML Engineer', 'Data Scientist'];
+        // let textIndex = 0;
+        // let charIndex = 0;
+
+        // function type() {
+        //     if (charIndex < typingTexts[textIndex].length) {
+        //         typingAnimationElement.textContent += typingTexts[textIndex].charAt(charIndex);
+        //         charIndex++;
+        //         setTimeout(type, 100); // Typing speed
+        //     } else {
+        //         setTimeout(erase, 1000); // Pause before erasing
+        //     }
+        // }
+
+        // function erase() {
+        //     if (charIndex > 0) {
+        //         typingAnimationElement.textContent = typingAnimationElement.textContent.slice(0, -1);
+        //         charIndex--;
+        //         setTimeout(erase, 50); // Erasing speed
+        //     } else {
+        //         textIndex = (textIndex + 1) % typingTexts.length;
+        //         setTimeout(type, 500); // Pause before next typing
+        //     }
+        // }
+
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     setTimeout(type, 500); // Start typing animation
+        // });
+
+        // // Google Form
+        // function openGoogleForm() {
+        //     window.open('https://forms.gle/Cn38pQj2WzR4dStp9', '_blank');
+        // }
+
+        // // Fade-in effect
+        // function revealSections() {
+        //     const sections = document.querySelectorAll('section');
+        //     for (let i = 0; i < sections.length; i++) {
+        //         const windowHeight = window.innerHeight;
+        //         const elementTop = sections[i].getBoundingClientRect().top;
+        //         const elementVisible = 150;
+
+        //         if (elementTop < windowHeight - elementVisible) {
+        //             sections[i].classList.add('card');
+        //         } else {
+        //             sections[i].classList.remove('card');
+        //         }
+        //     }
+        // }
+
+        // window.addEventListener('scroll', revealSections);
+        // window.addEventListener('load', revealSections);
+        // Automatically change theme based on time
+        function applyAutoTheme() {
+            const hour = new Date().getHours();
+            const body = document.body;
+            if (hour >= 6 && hour < 18) {
+                // Daytime (6 AM - 6 PM) -> Light Mode (default)
+                body.classList.remove('dark-mode', 'blackgold-mode');
+            } else if (hour >= 18 && hour < 21) {
+                // Evening (6 PM - 9 PM) -> Dark Mode
+                body.classList.add('dark-mode');
+                body.classList.remove('blackgold-mode');
+            } else {
+                // Nighttime (9 PM - 6 AM) -> Blackgold Mode
+                body.classList.add('blackgold-mode');
+                body.classList.remove('dark-mode');
+            }
+        }
+        // Call it once page loads
+        document.addEventListener('DOMContentLoaded', applyAutoTheme);
+        setInterval(applyAutoTheme, 60 * 60 * 1000); // Check every 1 hour
+
+        document.getElementById("year").textContent = new Date().getFullYear();// for automate year change in copyright
+    </script>
+</body>
+</html>
