@@ -42,7 +42,7 @@ This portfolio highlights my academic journey, AI certifications, and hands-on p
 
 ## 📷 Screenshots
 
-| Dark Mode View | Responsive Layout | AI Workflows |
+| Profile View | Responsive Layout | AI Workflows |
 |----------------|-------------------|--------------|
 | ![Preview](images/about.jpg) | ![Mobile](images/bg_1.jpg) | ![Workflow](images/Auto-Reply-Email-Assistant.png) |
 
