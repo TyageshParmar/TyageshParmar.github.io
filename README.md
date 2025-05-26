@@ -44,7 +44,7 @@ This portfolio highlights my academic journey, AI certifications, and hands-on p
 
 | Dark Mode View | Responsive Layout | AI Workflows |
 |----------------|-------------------|--------------|
-| ![Preview](images/about.png) | ![Mobile](images/bg_1.jpg) | ![Workflow](images/Auto-Reply-Email-Assistant.jpg) |
+| ![Preview](images/about.jpg) | ![Mobile](images/bg_1.jpg) | ![Workflow](images/Auto-Reply-Email-Assistant.png) |
 
 ---
 
@@ -59,7 +59,7 @@ This project is open-sourced under the [MIT License](LICENSE).
 **Tyagesh Parmar**  
 AI Engineer | Data Scientist  
 📫 [LinkedIn](https://www.linkedin.com/in/tyagesh-parmar-740248333/)  
-🌐 [Portfolio](https://github.com/TyageshParmar)  
+🌐 [Portfolio](https://tyageshparmar.github.io/)  
 📧 Email: tyageshparmar2107@gmail.com
 
 ---
